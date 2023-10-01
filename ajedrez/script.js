@@ -99,8 +99,8 @@ const leerTablero = ()=>{
     }
 
     for (let i = 0; i < casNumber8.length;i++){
-        if (casNumber8[i].textContent == "♟"){
-            casNumber8[i].textContent = "♛"
+        if (casNumber1[i].textContent == "♟"){
+            casNumber1[i].textContent = "♛"
         }
     }
 }
@@ -122,6 +122,7 @@ const mover = (inicial,final,pieza) =>{
                 inicial.setAttribute("draggable","false")
                 inicial.setAttribute("mov","empty")
                 inicial.setAttribute("equipo","none")
+                leerTablero()
                 return true
             }
             return false
