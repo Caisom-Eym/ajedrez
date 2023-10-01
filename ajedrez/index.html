@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajedrez</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main id="tablero">
+        <div class="nothing" id="nothing"></div>
+        <div class="positionLetter" id="a">a</div>
+        <div class="positionLetter" id="b">b</div>
+        <div class="positionLetter" id="c">c</div>
+        <div class="positionLetter" id="d">d</div>
+        <div class="positionLetter" id="e">e</div>
+        <div class="positionLetter" id="f">f</div>
+        <div class="positionLetter" id="g">g</div>
+        <div class="positionLetter" id="h">h</div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="8">8</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="a8" letter="a" number="8" column="8" mov="0" title="a8">♜</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="b8" letter="b" number="8" column="7" mov="0" title="b8">♞</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="c8" letter="c" number="8" column="6" mov="0" title="c8">♝</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="d8" letter="d" number="8" column="5" mov="0" title="d8">♛</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="e8" letter="e" number="8" column="4" mov="0" title="e8">♚</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="f8" letter="f" number="8" column="3" mov="0" title="f8">♝</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="g8" letter="g" number="8" column="2" mov="0" title="g8">♞</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="h8" letter="h" number="8" column="1" mov="0" title="h8">♜</div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="7">7</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="a7" letter="a" number="7" column="8" mov="0" title="a7">♟</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="b7" letter="b" number="7" column="7" mov="0" title="b7">♟</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="c7" letter="c" number="7" column="6" mov="0" title="c7">♟</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="d7" letter="d" number="7" column="5" mov="0" title="d7">♟</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="e7" letter="e" number="7" column="4" mov="0" title="e7">♟</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="f7" letter="f" number="7" column="3" mov="0" title="f7">♟</div>
+        <div draggable="true" class="negro casilla"  equipo="2" id="g7" letter="g" number="7" column="2" mov="0" title="g7">♟</div>
+        <div draggable="true" class="blanco casilla" equipo="2" id="h7" letter="h" number="7" column="1" mov="0" title="h7">♟</div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="6">6</div>
+        <div draggable="false" class="blanco casilla" id="a6" letter="a" number="6" column="8" mov="empty" title="a6"></div>
+        <div draggable="false" class="negro casilla"  id="b6" letter="b" number="6" column="7" mov="empty" title="b6"></div>
+        <div draggable="false" class="blanco casilla" id="c6" letter="c" number="6" column="6" mov="empty" title="c6"></div>
+        <div draggable="false" class="negro casilla"  id="d6" letter="d" number="6" column="5" mov="empty" title="d6"></div>
+        <div draggable="false" class="blanco casilla" id="e6" letter="e" number="6" column="4" mov="empty" title="e6"></div>
+        <div draggable="false" class="negro casilla"  id="f6" letter="f" number="6" column="3" mov="empty" title="f6"></div>
+        <div draggable="false" class="blanco casilla" id="g6" letter="g" number="6" column="2" mov="empty" title="g6"></div>
+        <div draggable="false" class="negro casilla"  id="h6" letter="h" number="6" column="1" mov="empty" title="h6"></div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="5">5</div>
+        <div draggable="false" class="negro casilla"  id="a5" letter="a" number="5" column="8" mov="empty" title="a5"></div>
+        <div draggable="false" class="blanco casilla" id="b5" letter="b" number="5" column="7" mov="empty" title="b5"></div>
+        <div draggable="false" class="negro casilla"  id="c5" letter="c" number="5" column="6" mov="empty" title="c5"></div>
+        <div draggable="false" class="blanco casilla" id="d5" letter="d" number="5" column="5" mov="empty" title="d5"></div>
+        <div draggable="false" class="negro casilla"  id="e5" letter="e" number="5" column="4" mov="empty" title="e5"></div>
+        <div draggable="false" class="blanco casilla" id="f5" letter="f" number="5" column="3" mov="empty" title="f5"></div>
+        <div draggable="false" class="negro casilla"  id="g5" letter="g" number="5" column="2" mov="empty" title="g5"></div>
+        <div draggable="false" class="blanco casilla" id="h5" letter="h" number="5" column="1" mov="empty" title="h5"></div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="4">4</div>
+        <div draggable="false" class="blanco casilla" id="a4" letter="a" number="4" column="8" mov="empty" title="a4"></div>
+        <div draggable="false" class="negro casilla"  id="b4" letter="b" number="4" column="7" mov="empty" title="b4"></div>
+        <div draggable="false" class="blanco casilla" id="c4" letter="c" number="4" column="6" mov="empty" title="c4"></div>
+        <div draggable="false" class="negro casilla"  id="d4" letter="d" number="4" column="5" mov="empty" title="d4"></div>
+        <div draggable="false" class="blanco casilla" id="e4" letter="e" number="4" column="4" mov="empty" title="e4"></div>
+        <div draggable="false" class="negro casilla"  id="f4" letter="f" number="4" column="3" mov="empty" title="f4"></div>
+        <div draggable="false" class="blanco casilla" id="g4" letter="g" number="4" column="2" mov="empty" title="g4"></div>
+        <div draggable="false" class="negro casilla"  id="h4" letter="h" number="4" column="1" mov="empty" title="h4"></div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="3">3</div>
+        <div draggable="false" class="negro casilla"  id="a3" letter="a" number="3" column="8" mov="empty" title="a3"></div>
+        <div draggable="false" class="blanco casilla" id="b3" letter="b" number="3" column="7" mov="empty" title="b3"></div>
+        <div draggable="false" class="negro casilla"  id="c3" letter="c" number="3" column="6" mov="empty" title="c3"></div>
+        <div draggable="false" class="blanco casilla" id="d3" letter="d" number="3" column="5" mov="empty" title="d3"></div>
+        <div draggable="false" class="negro casilla"  id="e3" letter="e" number="3" column="4" mov="empty" title="e3"></div>
+        <div draggable="false" class="blanco casilla" id="f3" letter="f" number="3" column="3" mov="empty" title="f3"></div>
+        <div draggable="false" class="negro casilla"  id="g3" letter="g" number="3" column="2" mov="empty" title="g3"></div>
+        <div draggable="false" class="blanco casilla" id="h3" letter="h" number="3" column="1" mov="empty" title="h3"></div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="2">2</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="a2" letter="a" number="2" column="8" mov="0" title="a2">♙</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="b2" letter="b" number="2" column="7" mov="0" title="b2">♙</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="c2" letter="c" number="2" column="6" mov="0" title="c2">♙</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="d2" letter="d" number="2" column="5" mov="0" title="d2">♙</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="e2" letter="e" number="2" column="4" mov="0" title="e2">♙</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="f2" letter="f" number="2" column="3" mov="0" title="f2">♙</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="g2" letter="g" number="2" column="2" mov="0" title="g2">♙</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="h2" letter="h" number="2" column="1" mov="0" title="h2">♙</div>
+        <!-- ------------------------- -->
+        <div class="positionNumber" id="1">1</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="a1" letter="a" number="1" column="8" mov="0" title="a1">♖</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="b1" letter="b" number="1" column="7" mov="0" title="b1">♘</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="c1" letter="c" number="1" column="6" mov="0" title="c1">♗</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="d1" letter="d" number="1" column="5" mov="0" title="d1">♕</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="e1" letter="e" number="1" column="4" mov="0" title="e1">♔</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="f1" letter="f" number="1" column="3" mov="0" title="f1">♗</div>
+        <div draggable="true" class="negro casilla"  equipo="1" id="g1" letter="g" number="1" column="2" mov="0" title="g1">♘</div>
+        <div draggable="true" class="blanco casilla" equipo="1" id="h1" letter="h" number="1" column="1" mov="0" title="h1">♖</div>
+    </main>
+</body>
+</html>
